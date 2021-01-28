@@ -29,6 +29,7 @@
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
     </ul>
     <button type="button" @click="callApi">Call API</button>
+    <p>More text</p>
   </div>
 </template>
 
