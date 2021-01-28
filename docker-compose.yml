@@ -1,0 +1,19 @@
+version: '3.4'
+
+services:
+  vncd_webapi:
+    container_name: vncd_webapi_cont
+    image: ${DOCKER_REGISTRY-}vncdwebapi
+    build:
+      context: .
+      dockerfile: VNCD_WebAPI/Dockerfile
+    ports:
+      - "49256:443"
+  vncd_ui:
+    container_name: vncd_ui_cont
+    image: ${DOCKER_REGISTRY-}vncdui
+    build:
+      context: .
+      dockerfile: vncd-ui/Dockerfile
+    ports:
+      - "49257:8080"
